@@ -1,15 +1,16 @@
 @keyframes background {
-    from {background-color: pink;}
-    to {background-color: grey;}
+    from {background-color: gray;}
+    to {background-color: palevioletred;}
   }
 
   body {
-    background-color: grey;
+    background-color: palevioletred;
     animation-name: background;
     animation-duration: 8s;
+    width: 100%;
   }
 
-  #welcome {
+  .title {
       font-family: Arial, Helvetica, sans-serif;
       text-transform: uppercase; 
       color: white; 
@@ -29,17 +30,18 @@
       100% {
           margin-bottom: 40px; 
       }
-  }
+  } 
 
   #name {
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      color: lightseagreen; 
+      color: white;
       text-align: center; 
+      font-size: 50px; 
   }
 
   #square {
-    width: 300px;
-    height: 300px; 
+    width: 150px;
+    height: 150px; 
     background-color: white; 
     transition: border-radius 2s; 
     margin: auto;  
@@ -59,3 +61,70 @@
  a {
      text-decoration: none; 
  }
+
+ #profilecontent {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    text-align: center; 
+    font-size: 18px;
+}
+
+#logo {
+    display: block; 
+    margin: 0 auto; 
+    width: 10%; 
+}
+
+#next {
+    width: 20%; 
+    animation-name: nextarrow; 
+    animation-duration: 3s; 
+    animation-fill-mode: forwards;
+    position: fixed; 
+}
+
+@keyframes nextarrow {
+  0% {
+      left: 0;
+  }
+  100% {
+      left: 80%;
+  }
+}
+
+.container {
+    width: 100%; 
+    justify-content: center; 
+    display: flex; 
+    position: absolute;
+}
+
+.education {
+    width: 15vw;  
+    height: 25vh;
+    margin: 15px; 
+}
+
+.imgwrap {
+    position: relative;
+  }
+  
+  .imgdescription {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(211, 211, 211, 0.9);
+    color: black; 
+    visibility: hidden;
+    opacity: 0;
+  
+    /* transition effect. not necessary */
+    transition: opacity .2s, visibility .2s;
+  }
+  
+  .imgwrap:hover .imgdescription {
+    visibility: visible;
+    opacity: 1;
+  }
