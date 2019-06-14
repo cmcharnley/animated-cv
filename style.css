@@ -80,7 +80,7 @@
     animation-name: nextarrow; 
     animation-duration: 3s; 
     animation-fill-mode: forwards;
-    position: fixed; 
+    position: relative; 
 }
 
 @keyframes nextarrow {
@@ -99,7 +99,7 @@
     position: absolute;
 }
 
-.education {
+.education, .employment {
     width: 15vw;  
     height: 25vh;
     margin: 15px; 
@@ -116,15 +116,46 @@
     left: 0;
     right: 0;
     background: rgba(211, 211, 211, 0.9);
-    color: black; 
+    color: darkslategrey;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    padding: 20px;
     visibility: hidden;
     opacity: 0;
-  
-    /* transition effect. not necessary */
     transition: opacity .2s, visibility .2s;
   }
   
   .imgwrap:hover .imgdescription {
     visibility: visible;
     opacity: 1;
+  }
+
+  #contact {
+      float:right;
+      animation-name: contactbounce;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      position: relative; 
+  }
+
+  @keyframes contactbounce {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: 50;
+    }
+    100% {
+        top:0; 
+    }
+  }
+
+
+  input {
+      width: 80%;
+      padding: 10px; 
+      display: inline-block;
+      margin-left: 10%;
+      margin-right: 10%;
+      text-align: center;
   }
